@@ -14,6 +14,21 @@
 
 **Status:** Open
 
+**Likelihood:** 4 — Likely
+
+**Impact:** 5 — Severe
+
+**Risk rating:** 4 × 5 = 20
+
+**Risk level:** Critical
+
+**Risk acceptance decision:** Treat
+
+**Approval authority:** Senior Management
+
+**Review frequency:** Monthly
+
+
 
 ### Risk 2: Student account takeover
 
@@ -30,6 +45,21 @@
 **Risk owner:** Head of IT Operations
 
 **Status:** Open
+
+**Likelihood:** 4 — Likely
+
+**Impact:** 4 — Major
+
+**Risk rating:** 4 × 4 = 16
+
+**Risk level:** High
+
+**Risk acceptance decision:** Treat
+
+**Approval authority:** Head of IT Operations
+
+**Review frequency:** Monthly
+
 
 
 ### Risk 3: Unauthorized access to employee and financial information
@@ -48,6 +78,21 @@
 
 **Status:** Open
 
+**Likelihood:** 3 — Possible
+
+**Impact:** 5 — Severe
+
+**Risk rating:** 3 × 5 = 15
+
+**Risk level:** High
+
+**Risk acceptance decision:** Treat
+
+**Approval authority:** Senior Management
+
+**Review frequency:** Monthly
+
+
 ### Risk 4: Learning platform unavailability
 
 **Asset:** Ikigai web and mobile learning platform, student database, and critical third-party services
@@ -64,6 +109,21 @@
 
 **Status:** Open
 
+**Likelihood:** 3 — Possible
+
+**Impact:** 5 — Severe
+
+**Risk rating:** 3 × 5 = 15
+
+**Risk level:** High
+
+**Risk acceptance decision:** Treat
+
+**Approval authority:** Senior Management
+
+**Review frequency:** Monthly
+
+
 **Likelihood:** `[score and description]`
 
 **Impact:** `[score and description]`
@@ -77,3 +137,5 @@
 **Approval authority:** `[role]`
 
 **Review date:** `[date or review frequency]`
+
+
