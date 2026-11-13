@@ -64,3 +64,16 @@
 
 **Status:** Open
 
+**Likelihood:** `[score and description]`
+
+**Impact:** `[score and description]`
+
+**Risk rating:** `[likelihood × impact]`
+
+**Risk level:** `[Low, Medium, High, or Critical]`
+
+**Risk acceptance decision:** `[Accept, Treat, Transfer, or Avoid]`
+
+**Approval authority:** `[role]`
+
+**Review date:** `[date or review frequency]`
