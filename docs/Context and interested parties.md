@@ -37,6 +37,40 @@
 
 ## External Issues
 
+## External Issues
+
+### 1. Changes in privacy and cybersecurity regulations
+
+**Issue:** Ikigai may be affected by changes to privacy and cybersecurity laws, regulations, and regulatory guidance in the countries or regions where it operates or serves students and customers.
+
+**Effect on information security:** A change in legal requirements may require Ikigai to modify how it collects, stores, shares, retains, and protects personal information. Failure to identify and respond to these changes could lead to non-compliance, complaints, penalties, or loss of customer trust.
+
+**Possible response:** Ikigai should monitor relevant legal and regulatory developments and assess whether changes are needed in its policies, controls, contracts, systems, and privacy processes.
+
+### 2. Changing cyber-threat landscape
+
+**Issue:** Ikigai may face changing cyber threats such as phishing, ransomware, account takeover, denial-of-service attacks, software vulnerabilities, and attacks against cloud or mobile applications.
+
+**Effect on information security:** New or changing threats may exploit weaknesses in Ikigai’s applications, accounts, infrastructure, or third-party services, which could affect the confidentiality, integrity, or availability of student information and learning services.
+
+**Possible response:** Ikigai should monitor relevant threats, review its risks periodically, apply security updates, test important controls, and update its incident-response and business-continuity plans.
+
+### 3. Rapid development of artificial intelligence
+
+**Issue:** New AI models and AI-enabled technologies are developing rapidly. If Ikigai introduces AI features such as an AI tutor, chatbot, or automated evaluation system, the organization may face new security, privacy, and safety risks.
+
+**Effect on information security:** An AI feature may disclose personal information, reveal confidential course content, be manipulated through prompt injection, produce unsafe outputs, or use student data in an unintended way.
+
+**Possible response:** Before introducing an AI feature, Ikigai should perform security, privacy, and safety assessments, define acceptable use, restrict the data available to the AI system, test for misuse, and monitor the feature after release.
+
+### 4. Cloud and service-provider availability
+
+**Issue:** Ikigai depends on external cloud and technology service providers to operate its learning platform, payment processing, live classes, email communication, and other services.
+
+**Effect on information security:** A provider outage, security incident, data loss, or service disruption could affect the confidentiality, integrity, or availability of Ikigai’s systems and student information.
+
+**Possible response:** Ikigai should assess important providers, define security and availability requirements in contracts, monitor service performance, maintain backups, and prepare alternative procedures for critical services.
+
 
 
 ## Interested Parties and Their Requirements
