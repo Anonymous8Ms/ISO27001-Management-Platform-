@@ -48,3 +48,12 @@
 
 **Security concerns:** Unauthorized access, financial fraud, data manipulation, accidental disclosure, and loss of financial records.
 
+### 6. Web and Mobile Learning Platform
+
+**Asset owner:** Engineering and IT Operations
+
+**Information processed:** Student accounts, course access, learning records, examination data, payment status, and application activity.
+
+**Importance:** High
+
+**Security concerns:** Service outage, unauthorized access, insecure features, data leakage, data alteration, and dependency on external services.
