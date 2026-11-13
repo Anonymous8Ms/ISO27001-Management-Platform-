@@ -37,8 +37,6 @@
 
 ## External Issues
 
-## External Issues
-
 ### 1. Changes in privacy and cybersecurity regulations
 
 **Issue:** Ikigai may be affected by changes to privacy and cybersecurity laws, regulations, and regulatory guidance in the countries or regions where it operates or serves students and customers.
