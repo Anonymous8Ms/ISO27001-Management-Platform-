@@ -35,4 +35,31 @@ The organization wants to:
 - Monitor third-party technology vendors.
 - Maintain evidence for audits and customer reviews.
 - Improve readiness for ISO/IEC 27001 certification.
-- Support privacy and payment-security obligations.
+- Support privacy and payment-security obligations. 
+
+  ## Initial ISMS Scope
+
+The ISMS covers the people, processes, information, applications, and cloud infrastructure used to develop, operate, support, and administer Ikigai’s online education platform.
+
+### Included in the Initial Scope
+
+- Ikigai’s web and mobile learning platforms
+- Student and parent account management
+- Course and examination-content management
+- Student learning records and examination results
+- Customer-support activities involving student information
+- Identity and access management
+- Cloud infrastructure used to operate the platform
+- Software development and change management
+- Security monitoring, incident management, and backups
+- Relevant third-party services and vendors
+
+### Excluded from the Initial Scope
+
+- Real student or employee information
+- Physical security of vendor-owned data centers
+- Detailed implementation of payment-provider infrastructure
+- Complete legal compliance assessment
+- Full certification of Ikigai
+- Automatic claims that Ikigai is ISO/IEC 27001 compliant
+
