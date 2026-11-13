@@ -91,3 +91,11 @@
 
 **Classification:** Regulatory.
 
+### 4. Customers and institutional partners
+
+Requirement: Ikigai must protect customer information, meet agreed security requirements, and provide evidence of security controls when requested.
+**Classification:** Contractual and expectation.
+
+### 5. Third-party service providers
+Requirement: Vendors should protect Ikigai’s data, follow agreed security requirements, report incidents promptly, and support secure data deletion or return when the relationship ends.
+**Classification:** Contractual and expectation.
