@@ -71,5 +71,23 @@
 
 
 
-## Interested Parties and Their Requirements
- 
+## Interested Parties and Their Requirements :-
+
+### 1. Students and parents
+
+**Requirement:** Their personal information, learning records, examination results, account credentials, and payment-related information should be collected, used, stored, and shared securely. They should receive clear information about how their data is used and have a way to raise complaints or privacy concerns.
+
+**Classification:** Expectation and regulatory requirement.
+
+### 2. Employees and contractors
+
+**Requirement:** Employees and contractors should receive security training, access only the information required for their work, and follow Ikigai’s security policies and procedures. Ikigai must protect confidential information from unauthorized sharing by current or former employees by using confidentiality agreements, least-privilege access, access reviews, and timely access removal during offboarding.
+
+**Classification:** Contractual and expectation.
+
+ ### 3. Regulators and government authorities
+
+**Requirement:** Ikigai should comply with applicable privacy, cybersecurity, child-data, consumer-protection, and breach-reporting requirements. It should maintain accurate records and cooperate with lawful requests, investigations, and notifications.
+
+**Classification:** Regulatory.
+
