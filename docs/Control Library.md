@@ -51,6 +51,7 @@
 
 **Implementation status:** Planned
 
+
 x### Control 2: Secure Development and Change Management
 
 **ISO/IEC 27001 reference:** Annex A 8.25 Secure development life cycle, A.8.26 Application security requirements, A.8.28 Secure coding, and A.8.32 Change management
@@ -133,3 +134,254 @@ A high-risk change requires security and privacy impact review, testing in a non
 **Justification:** Ikigai operates web and mobile applications that process student information, authentication data, learning records, payment-related information, and external integrations. A risk-based change-management process is necessary to reduce the possibility of data exposure, account compromise, insecure integrations, and service disruption.
 
 **Implementation status:** Planned
+
+
+### Control 3: Vulnerability and Patch Management
+
+**ISO/IEC 27001 reference:** Annex A 8.8 Management of technical vulnerabilities
+
+**Purpose:** Identify, assess, prioritize, and remediate technical vulnerabilities in Ikigai’s applications, infrastructure, devices, and third-party components.
+
+**Control description:** Ikigai should regularly identify vulnerabilities, assess their severity and business impact, assign remediation owners, apply patches or compensating controls within defined timeframes, and retain evidence of the work performed.
+
+**Related risks:** Risk 1, Risk 2, Risk 3, and Risk 4
+
+**Control owner:** Head of IT Operations
+
+**Supporting owners:**
+
+- Engineering identifies and fixes vulnerabilities in applications and dependencies.
+- IT Operations patches infrastructure, operating systems, and devices.
+- System owners assess the effect of vulnerabilities on their systems.
+- Vendor managers coordinate vulnerability information received from third parties.
+- GRC Analyst tracks overdue remediation and reports significant exceptions.
+
+**Vulnerability remediation targets:**
+
+| Severity | Target |
+|---|---|
+| Critical | Remediate within 7 calendar days |
+| High | Remediate within 14 calendar days |
+| Medium | Remediate within 30 calendar days |
+| Low | Remediate within 90 calendar days |
+
+**Emergency condition:** A critical vulnerability that is actively exploited, internet-facing, or likely to expose student or financial information should be contained or mitigated within 24 to 72 hours.
+
+**Required process:**
+
+1. Identify vulnerabilities through scanning, vendor notices, penetration tests, code reviews, and security monitoring.
+2. Record the affected asset, source, severity, and discovery date.
+3. Assess exploitability, exposure, affected information, and business impact.
+4. Assign a remediation owner and target date.
+5. Apply a patch, upgrade, configuration change, or compensating control.
+6. Test the change before production deployment where practical.
+7. Verify that the vulnerability has been resolved.
+8. Record evidence and close the item.
+9. Escalate overdue or high-impact vulnerabilities to management.
+10. Record and approve exceptions when remediation cannot meet the target.
+
+**Required evidence:**
+
+- Vulnerability-management policy
+- Vulnerability-scan reports
+- Patch-management records
+- Vendor security advisories
+- Penetration-test findings
+- Remediation tickets
+- Patch verification results
+- Exception and risk-acceptance records
+- Monthly vulnerability-status report
+
+**Statement of Applicability decision:** Applicable
+
+**Justification:** Ikigai operates web and mobile applications, cloud infrastructure, databases, employee devices, and third-party integrations. Unpatched or misconfigured systems could allow unauthorized access, account compromise, data exposure, or service disruption.
+
+**Implementation status:** Planned
+
+
+### Control 4: Backup and Recovery
+
+**ISO/IEC 27001 reference:** Annex A 8.13 Information backup and related ICT continuity controls
+
+**Purpose:** Ensure that Ikigai can recover important information and services after accidental deletion, corruption, ransomware, infrastructure failure, or a major service disruption.
+
+**Control description:** Ikigai performs scheduled backups of important information and systems, protects backups from unauthorized access or deletion, monitors backup success, and periodically tests restoration.
+
+**Related risks:** Risk 1, Risk 3, and Risk 4
+
+**Control owner:** Head of IT Operations
+
+**Supporting owners:**
+
+- Engineering identifies application and database recovery requirements.
+- Finance and Human Resources identify critical records that require recovery.
+- System owners confirm backup scope and retention needs.
+- GRC Analyst tracks backup and recovery evidence.
+- Cloud or service providers perform agreed backup activities under the shared-responsibility model.
+
+**Backup scope:**
+
+- Student information database
+- Student account and authentication data
+- Employee information
+- Financial information
+- Course and examination content
+- GRC records
+- Source code and system configuration
+
+**Backup requirements:**
+
+- Student, employee, and financial information should be backed up daily.
+- Course and examination content should be backed up whenever new content is uploaded or existing content is changed.
+- Each approved version of course and examination content should be retained so that an earlier version can be restored.
+- Examination content and answer keys should have restricted access and protected backup copies.
+- A periodic backup verification should confirm that uploaded content can be successfully restored.
+
+- Backups should be encrypted and access-controlled.
+- Backups should be stored separately from production where practical.
+- Backup failures should generate alerts and be investigated.
+- Backup retention periods should be defined for each information type.
+- Backup deletion should require authorized approval.
+
+**Recovery targets:**
+
+- **RTO:** Restore critical learning services within 4 hours after a major outage.
+- **RPO:** Restore critical data with no more than 1 hour of data loss, where technically practical.
+
+**Recovery testing:**
+
+- Test critical database restoration quarterly.
+- Perform a broader disaster-recovery exercise annually.
+- Retest recovery procedures after major infrastructure changes.
+- Record the test result, issues found, corrective action, and approval.
+
+**Required evidence:**
+
+- Backup and recovery policy
+- Backup schedule
+- Backup-success reports
+- Backup-failure alerts and corrective actions
+- Backup-retention configuration
+- Encryption and access-control evidence
+- Restoration-test records
+- Disaster-recovery exercise report
+- RTO and RPO approval
+- Recovery-plan version history
+
+**Statement of Applicability decision:** Applicable
+
+**Justification:** Ikigai depends on online learning services and stores student, employee, financial, academic, and GRC information. Backup and recovery capabilities are necessary to preserve information and restore services after data loss or disruption.
+
+**Implementation status:** Planned
+
+
+### Control 5: Supplier Security and Third-Party Risk Management
+
+**ISO/IEC 27001 reference:** Annex A 5.19 Information security in supplier relationships, A.5.20 Addressing information security within supplier agreements, A.5.21 Managing information security in the ICT supply chain, and A.5.22 Monitoring, review, and change management of supplier services
+
+**Purpose:** Ensure that third-party vendors do not introduce unacceptable confidentiality, integrity, availability, privacy, or compliance risks to Ikigai.
+
+**Control description:** Ikigai identifies, assesses, approves, contracts with, monitors, and periodically reviews suppliers that process Ikigai information or support important business services.
+
+**Related risks:** Risk 1, Risk 3, and Risk 4
+
+**Control owner:** Head of IT Operations
+
+**Supporting owners:**
+
+- Legal or Privacy function reviews contracts and data-processing requirements.
+- Finance reviews commercial and payment-related requirements.
+- System owners identify the information and services involved.
+- Procurement or Vendor Manager coordinates onboarding and reviews.
+- GRC Analyst maintains the vendor register and tracks evidence.
+- Department owners confirm the business need for the vendor.
+
+**Vendor risk categories:**
+
+- **Critical vendor:** Processes highly sensitive information or supports a service whose failure could seriously affect students, security, finances, or platform availability.
+- **High-risk vendor:** Processes important information or supports an important business function but has a more limited effect than a critical vendor.
+- **Low-risk vendor:** Has limited access to information and does not support a critical business service.
+
+**Examples:**
+
+- Cloud hosting provider: Critical
+- Payment service provider: Critical
+- Authentication provider: Critical or High
+- Video-conferencing provider: High
+- Email service provider: High
+- Analytics provider: High or Low, depending on the data collected
+- Office-supply vendor with no system or data access: Low
+
+**Pre-onboarding requirements:**
+
+Before approving a vendor, Ikigai should assess:
+
+- What information the vendor will process, store, or transmit
+- The purpose and extent of the vendor’s access
+- Data-storage locations and transfer arrangements
+- Security controls and available assurance reports
+- Encryption and access-management practices
+- Incident-reporting arrangements
+- Use of sub-processors or sub-vendors
+- Business-continuity and recovery capabilities
+- Data-retention, deletion, and return procedures
+- Relevant legal, regulatory, and contractual requirements
+
+**Contract requirements:**
+
+Where applicable, supplier agreements should define:
+
+- Information-security responsibilities
+- Privacy and data-processing obligations
+- Access-control requirements
+- Confidentiality obligations
+- Incident-notification timelines
+- Cooperation during investigations
+- Audit or evidence rights
+- Sub-processor approval or notification requirements
+- Data location and transfer requirements
+- Data return and secure deletion at contract termination
+- Service availability and recovery commitments
+
+**Review frequency:**
+
+- Critical vendors: Monthly formal review
+- High-risk vendors: Monthly formal review
+- Low-risk vendors: Review every three months
+- Major incident or significant service change: Immediate review
+- New sub-vendor, policy change, legal change, data-processing change, or security-assurance change: Review when identified
+
+**Ongoing monitoring:**
+
+Ikigai should monitor:
+
+- Vendor security incidents and breaches
+- Service outages and availability
+- Security-policy changes
+- New sub-processors or sub-vendors
+- Changes in data-processing activities
+- Security certification or audit-report status
+- Open vendor remediation actions
+- Contract and regulatory compliance
+
+**Required evidence:**
+
+- Vendor register
+- Vendor risk assessment
+- Security questionnaire
+- ISO 27001, SOC 2, PCI DSS, or other assurance evidence where relevant
+- Vendor contract
+- Data-processing agreement where applicable
+- Sub-processor list
+- Incident-notification records
+- Monthly or periodic review records
+- Service-level reports
+- Vendor-remediation tracker
+- Secure data-deletion or return evidence
+
+**Statement of Applicability decision:** Applicable
+
+**Justification:** Ikigai depends on cloud, payment, authentication, video, email, analytics, and other external providers. A supplier-security process is necessary to manage risks that Ikigai cannot control directly.
+
+**Implementation status:** Planned
+
