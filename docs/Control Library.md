@@ -52,7 +52,7 @@
 **Implementation status:** Planned
 
 
-x### Control 2: Secure Development and Change Management
+### Control 2: Secure Development and Change Management
 
 **ISO/IEC 27001 reference:** Annex A 8.25 Secure development life cycle, A.8.26 Application security requirements, A.8.28 Secure coding, and A.8.32 Change management
 
