@@ -385,3 +385,75 @@ Ikigai should monitor:
 
 **Implementation status:** Planned
 
+### Control 6: Information Security Awareness, Education and Training
+
+**ISO/IEC 27001 reference:** Annex A 6.3 Information security awareness, education, and training
+
+**Purpose:** Ensure that employees and contractors understand their information-security responsibilities and can identify, prevent, and report security and privacy problems.
+
+**Control description:** Ikigai provides security-awareness training before granting system access, comprehensive training annually, and quarterly awareness refreshers covering new threats, incidents, policy changes, and lessons learned.
+
+**Related risks:** Risk 1, Risk 2, and Risk 3
+
+**Control owner:** HR Manager or Head of People
+
+**Supporting owners:**
+
+- IT Operations provides technical-security guidance.
+- Legal or Privacy function provides privacy and data-protection guidance.
+- GRC Analyst tracks training completion and evidence.
+- Department managers ensure their teams complete required training.
+
+**Training requirements:**
+
+- New joiners and contractors must complete core security and privacy training before receiving system access.
+- New-joiner training must cover the main annual topics and the latest relevant quarterly threat information.
+- All employees and contractors must complete comprehensive security-awareness training annually.
+- Quarterly refreshers must cover new threats, phishing patterns, recent incidents, policy changes, and lessons learned.
+- Additional role-based training must be provided to developers, IT administrators, HR, Finance, and Customer Support staff.
+- Additional training must be provided after a major incident, significant policy change, or identified knowledge gap.
+
+**Training topics:**
+
+- Passwords and multi-factor authentication
+- Phishing and social engineering
+- Handling student, employee, and financial information
+- Incident reporting
+- Device and workspace security
+- Acceptable use of company systems
+- Confidentiality obligations
+- Secure use of artificial-intelligence tools
+- Privacy responsibilities
+- Consequences of unauthorized disclosure
+- Role-specific security responsibilities
+
+**Effectiveness checks:**
+
+- Training-completion tracking
+- Short quizzes
+- Simulated phishing exercises
+- Scenario-based exercises
+- Incident-reporting drills
+- Secure-coding training for developers
+- Privacy-handling exercises for relevant teams
+
+**Required evidence:**
+
+- Security-awareness policy
+- Annual training material
+- Quarterly refresher material
+- New-joiner training records
+- Attendance and completion reports
+- Quiz or assessment results
+- Phishing-simulation results
+- Role-based training records
+- Training exception and follow-up records
+
+**Statement of Applicability decision:** Applicable
+
+**Justification:** Employees and contractors may access student, employee, financial, academic, and system information. Awareness and role-specific training are necessary to reduce phishing, accidental disclosure, credential theft, and inappropriate handling of information.
+
+**Implementation status:** Planned
+
+
+
