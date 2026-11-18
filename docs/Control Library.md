@@ -456,4 +456,68 @@ Ikigai should monitor:
 **Implementation status:** Planned
 
 
+### Control 7: Information-Security Incident Management
+
+**ISO/IEC 27001 reference:** Annex A 5.24–5.28
+
+**Purpose:** Ensure that Ikigai can identify, report, assess, contain, investigate, recover from, and learn from information-security incidents.
+
+**Control description:** Ikigai maintains an incident-management process with defined severity levels, response time targets, responsibilities, escalation rules, evidence requirements, and lessons-learned activities.
+
+**Related risks:** Risk 1, Risk 2, Risk 3, and Risk 4
+
+**Control owner:** Incident Manager
+
+**Supporting owners:**
+
+- IT Operations handles technical containment and recovery.
+- Engineering handles application and code-related incidents.
+- Legal or Privacy handles privacy and notification assessments.
+- HR supports employee-related incidents.
+- Vendor Manager coordinates third-party incidents.
+- Senior Management approves major business and communication decisions.
+- GRC Analyst maintains records, evidence, and corrective actions.
+
+**Severity levels:**
+
+| Severity | Description | Initial response target |
+|---|---|---|
+| Critical | Major or ongoing impact to sensitive data, critical systems, or many users | Acknowledge within 15 minutes; assess within 1 hour |
+| High | Significant impact to an important system, group, or process | Acknowledge within 1 hour; assess within 4 hours |
+| Medium | Limited impact manageable through normal response | Acknowledge within 1 business day; assess within 2 business days |
+| Low | Minor event with no confirmed material impact | Acknowledge within 2 business days; assess within 5 business days |
+
+**Incident-response procedure:**
+
+1. Report the suspected incident.
+2. Record the initial facts and evidence.
+3. Determine whether it is an event or incident.
+4. Assign an initial severity.
+5. Contain the incident.
+6. Investigate the affected systems, information, and users.
+7. Remove the cause or exploited weakness.
+8. Recover and validate normal service.
+9. Communicate with authorized stakeholders.
+10. Record root cause, corrective actions, and lessons learned.
+11. Close the incident with authorized approval.
+
+**Required evidence:**
+
+- Incident-management policy
+- Incident register
+- Incident reports
+- Severity assessment
+- Response timeline
+- Evidence and investigation records
+- Communication and notification decisions
+- Recovery records
+- Root-cause analysis
+- Corrective-action tracker
+- Lessons-learned review
+
+**Statement of Applicability decision:** Applicable
+
+**Justification:** Ikigai processes student, employee, financial, academic, and authentication information and depends on critical online services. A formal incident-management process is necessary to reduce harm, support recovery, preserve evidence, and meet applicable notification obligations.
+
+**Implementation status:** Planned
 
