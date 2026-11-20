@@ -63,3 +63,10 @@ The ISMS covers the people, processes, information, applications, and cloud infr
 - Full certification of Ikigai
 - Automatic claims that Ikigai is ISO/IEC 27001 compliant
 
+## Platform Data Boundary
+
+The Ikigai GRC Management Platform is an internal governance, risk, and compliance application. It stores records used to manage the ISMS, including asset descriptions, risks, controls, Statement of Applicability decisions, treatment plans, evidence metadata, reviews, approvals, incidents, and audit history.
+
+The platform does not store real student records, employee records, payment-card information, passwords, authentication secrets, production application data, or real financial transactions.
+
+Student, employee, financial, academic, and vendor information described in this project represents Ikigai’s information assets and is used only as fictional context for risk and control analysis. Any evidence used in the learning project must be fictional, sanitized, or non-sensitive.
