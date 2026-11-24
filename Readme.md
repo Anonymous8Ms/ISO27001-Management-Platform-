@@ -1,5 +1,23 @@
 # ISO 27001 GRC Management Platform
 
+> Educational prototype — fictional data only — not an ISO 27001 compliance or certification system.
+
+## Current demo
+
+The Flask and SQLite MVP implements a fictional asset and risk register, 1–5 likelihood and impact assessment, risk treatment, seven selected Ikigai controls, risk-to-control links, limited Statement of Applicability decisions, evidence metadata references, submission, independent review decisions, and audit history. It does not accept evidence files or real personal, financial, credential, or production information.
+
+Run `python3 -m pip install -r requirements.txt` and `python3 app.py`, then open `http://127.0.0.1:8000`. Select a fictional demo identity in the header. This selector is a demonstration context and is not production authentication. Run the workflow check with `python3 -m unittest discover -s tests -v`.
+
+The five sidebar destinations are Dashboard, Asset Register, Risk Register, Reviews and Approvals, and Audit History. Other modules described below remain future plans.
+
+## Deploy to Vercel
+
+Vercel automatically detects the root `app.py` as a Flask application. Import this GitHub repository in Vercel, leave the framework preset and build/output settings on their detected defaults, and add a secret environment variable named `GRC_SESSION_KEY` for Production, Preview, and Development. Generate its value locally with `python3 -c "import secrets; print(secrets.token_hex(32))"`; do not commit the value.
+
+This repository uses SQLite. On Vercel it is placed in `/tmp`, because a Function's deployed filesystem is read-only. The resulting database is suitable only for a portfolio demonstration: records can reset on a cold start, redeployment, or a request served by a different Function instance. A durable multi-user deployment must migrate the database to a persistent service such as a Vercel Marketplace Postgres provider before it is treated as production.
+
+After the first deployment, open the Vercel URL and exercise the demo workflow. Future pushes to `main` create new production deployments when Git integration is enabled; pushes to other branches create previews.
+
 A learning project for understanding and applying Governance, Risk, and Compliance (GRC) concepts through a small ISO/IEC 27001:2022-inspired web application.
 
 > **Important:** This is an educational project. It is not a certified ISO 27001 compliance product and does not claim that an organization is compliant with ISO/IEC 27001.
@@ -59,30 +77,23 @@ These roles are design assumptions for the learning project and may be revised a
 
 ## Technology stack
 
-The technology stack will be selected after the requirements and data model are designed.
-
-Planned areas include:
-
-- Frontend: `[to be decided]`
-- Backend: `[to be decided]`
-- Database: `[to be decided]`
-- Authentication: `[to be decided]`
-- File storage: `[to be decided]`
-
-The implementation will be written and understood by the project author. AI may be used for explanations, review, and learning support, but not for generating the project implementation.
+- Frontend: server-rendered Jinja templates and CSS
+- Backend: Python 3.12 and Flask
+- Database: SQLite locally; temporary SQLite under `/tmp` in the Vercel portfolio demo
+- Authentication: fictional role-selector session for demonstration only
+- File storage: no evidence-file upload; fictional metadata references only
 
 ## Documentation
 
 - [Project scope](docs/project-scope.md)
-- Requirements: `[planned]`
-- User roles and permissions: `[planned]`
-- Database design: `[planned]`
-- Workflows: `[planned]`
-- Testing notes: `[planned]`
+- [Functional requirements](docs/Functional-requirements.md)
+- [User roles and permissions](docs/Roles-and-Permission%20.md)
+- [Workflows and statuses](docs/Workflows-and-status.md)
+- Tests: `tests/test_sessions.py`
 
 ## Current status
 
-**Status:** Project definition and learning stage
+**Status:** Educational first vertical-slice MVP, with further modules planned
 
 ### Completed
 

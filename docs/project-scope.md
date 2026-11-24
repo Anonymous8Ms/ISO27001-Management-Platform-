@@ -1,6 +1,11 @@
 
 # Project Scope
 
+> Educational prototype — fictional data only — not an ISO 27001 compliance or certification system.
+
+## Application Boundary
+
+The current software stores fictional GRC records about Ikigai assets and risks: asset descriptions, risk assessments and treatments, selected control references, SoA decisions, fictional evidence metadata references, reviews, and audit events. It does not store real student or employee records, transactions, passwords, payment-card data, authentication secrets, encryption keys, production application data, evidence files, or confidential evidence. The ISMS context below describes the fictional organization; it does not expand the data stored in this demo.
 ## Organization Profile
 
 **Organization name:** Ikigai 
@@ -63,10 +68,3 @@ The ISMS covers the people, processes, information, applications, and cloud infr
 - Full certification of Ikigai
 - Automatic claims that Ikigai is ISO/IEC 27001 compliant
 
-## Platform Data Boundary
-
-The Ikigai GRC Management Platform is an internal governance, risk, and compliance application. It stores records used to manage the ISMS, including asset descriptions, risks, controls, Statement of Applicability decisions, treatment plans, evidence metadata, reviews, approvals, incidents, and audit history.
-
-The platform does not store real student records, employee records, payment-card information, passwords, authentication secrets, production application data, or real financial transactions.
-
-Student, employee, financial, academic, and vendor information described in this project represents Ikigai’s information assets and is used only as fictional context for risk and control analysis. Any evidence used in the learning project must be fictional, sanitized, or non-sensitive.

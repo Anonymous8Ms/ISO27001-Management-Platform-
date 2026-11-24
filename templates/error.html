@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block body %}<section class="panel"><div class="eyebrow">REQUEST ERROR</div><h1>{{ code }}</h1><p>{{ message }}</p><a class="button" href="{{ url_for('dashboard',as_user=g.user.id) }}">Return to dashboard</a></section>{% endblock %}

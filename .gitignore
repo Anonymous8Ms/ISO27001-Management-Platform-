@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+grc.sqlite3
+.grc-session-key
+.DS_Store
+.venv/
