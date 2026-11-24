@@ -1,131 +1,170 @@
-# ISO 27001 GRC Management Platform
+# Ikigai GRC Management Platform
 
-> Educational prototype — fictional data only — not an ISO 27001 compliance or certification system.
+An educational Governance, Risk, and Compliance (GRC) management platform inspired by ISO/IEC 27001:2022 concepts.
 
-## Current demo
+The project models a fictional EdTech organization named **Ikigai** and demonstrates how information-security assets, risks, treatments, reviews, approvals, and audit history can be managed in one application.
 
-The Flask and SQLite MVP implements a fictional asset and risk register, 1–5 likelihood and impact assessment, risk treatment, seven selected Ikigai controls, risk-to-control links, limited Statement of Applicability decisions, evidence metadata references, submission, independent review decisions, and audit history. It does not accept evidence files or real personal, financial, credential, or production information.
+> **Important:** This is an educational prototype. It is not an ISO 27001-certified product, does not prove compliance, and must not be used to store real personal, financial, credential, or confidential information.
 
-Run `python3 -m pip install -r requirements.txt` and `python3 app/app.py`, then open `http://127.0.0.1:8000`. Select a fictional demo identity in the header. This selector is a demonstration context and is not production authentication. Run the workflow check with `python3 -m unittest discover -s app/tests -v`.
+## Live Demo
 
-The five sidebar destinations are Dashboard, Asset Register, Risk Register, Reviews and Approvals, and Audit History. Other modules described below remain future plans.
+[Open the Ikigai GRC platform](https://iso-27001-management-platform.vercel.app/)
 
-## Deploy to Vercel
+The live demo uses fictional data only.
 
-Vercel automatically detects `app/app.py` as a Flask application. Import this GitHub repository in Vercel, leave the framework preset and build/output settings on their detected defaults, and add a secret environment variable named `GRC_SESSION_KEY` for Production, Preview, and Development. Generate its value locally with `python3 -c "import secrets; print(secrets.token_hex(32))"`; do not commit the value.
+## Project Purpose
 
-This repository uses SQLite. On Vercel it is placed in `/tmp`, because a Function's deployed filesystem is read-only. The resulting database is suitable only for a portfolio demonstration: records can reset on a cold start, redeployment, or a request served by a different Function instance. A durable multi-user deployment must migrate the database to a persistent service such as a Vercel Marketplace Postgres provider before it is treated as production.
+Small organizations may manage security risks, ownership, approvals, and audit records across separate spreadsheets and documents. This project demonstrates how those activities can be organized through a simple GRC workflow.
 
-After the first deployment, open the Vercel URL and exercise the demo workflow. Future pushes to `main` create new production deployments when Git integration is enabled; pushes to other branches create previews.
+The application was created as a learning project while studying:
 
-## Repository structure
+- Governance, Risk, and Compliance
 
-- `GRC-Documentation/` — project documentation and GRC source-of-truth records
-- `UI-UX/` — Jinja page templates and the shared stylesheet
-- `app/` — Flask application code and automated workflow tests
+- Information Security Management Systems
 
-The root contains only the README and the small configuration files required by Python, Git, and Vercel.
-
-A learning project for understanding and applying Governance, Risk, and Compliance (GRC) concepts through a small ISO/IEC 27001:2022-inspired web application.
-
-> **Important:** This is an educational project. It is not a certified ISO 27001 compliance product and does not claim that an organization is compliant with ISO/IEC 27001.
-
-## Project purpose
-
-The goal of this project is to build a simple system that helps a fictional organization manage information-security risks, controls, Statement of Applicability (SoA) decisions, evidence, reviews, approvals, and audit history.
-
-This project is being developed while learning about:
-
-- Governance, Risk, and Compliance (GRC)
-- Information Security Management Systems (ISMS)
 - ISO/IEC 27001:2022 concepts
+
+- Information-asset management
+
 - Risk assessment and treatment
-- Security controls
-- Evidence management
-- Internal review and approval workflows
+
+- Role-based access principles
+
+- Review and approval workflows
+
 - Audit trails
 
-## Problem being addressed
+## Fictional Organization
 
-Small organizations often track risks, controls, evidence, and approvals in separate spreadsheets, documents, and email conversations. This project explores how those activities could be organized in one application.
+**Organization:** Ikigai
+**Industry:** Education Technology (EdTech)
 
-The intended workflow is:
+Ikigai provides online courses, live classes, mock tests, and career-preparation programs. Its fictional information-security scope includes student information, application services, cloud infrastructure, employee information, finance-related information, vendors, and security records.
 
-> **Risk → Control → SoA decision → Evidence → Review → Approval → Audit history**
+No real organization, student, employee, customer, payment, credential, or confidential information is used in this project.
 
-## Planned capabilities
+## Implemented Features
 
-The first version is expected to include:
+### Dashboard
 
-- Organization and ISMS-scope details
-- User roles and permissions
-- Risk register
-- Risk-to-control mapping
-- ISO 27001 control library
-- Statement of Applicability records
-- Control owners and implementation status
-- Evidence records
-- Review and approval workflow
-- Audit-history records
-- Basic dashboard metrics and filters
+- Security-posture summary
 
-The scope may change as the project develops. Changes will be recorded in the project documentation.
+- Registered asset count
 
-## Intended users
+- Open-risk count
 
-The initial design considers these user roles:
+- Critical-risk count
 
-- **Administrator:** Manages users and basic system settings.
-- **GRC Analyst:** Creates and maintains risks, controls, and SoA records.
-- **Control Owner:** Updates assigned controls and submits evidence.
-- **Reviewer/Approver:** Reviews submissions and approves or rejects them.
-- **Read-only Auditor:** Views relevant records and audit history.
+- Awaiting-review count
 
-These roles are design assumptions for the learning project and may be revised after further analysis.
+- Recent audit activity
 
-## Technology stack
+### Asset Register
 
-- Frontend: server-rendered Jinja templates and CSS
-- Backend: Python 3.12 and Flask
-- Database: SQLite locally; temporary SQLite under `/tmp` in the Vercel portfolio demo
-- Authentication: fictional role-selector session for demonstration only
-- File storage: no evidence-file upload; fictional metadata references only
+- Create fictional information assets
 
-## Documentation
+- Assign an owner or responsible team
 
-- [Project scope](GRC-Documentation/project-scope.md)
-- [Functional requirements](GRC-Documentation/Functional-requirements.md)
-- [User roles and permissions](GRC-Documentation/Roles-and-Permission%20.md)
-- [Workflows and statuses](GRC-Documentation/Workflows-and-status.md)
-- Tests: `app/tests/test_sessions.py`
+- Record asset description and information type
 
-## Current status
+- Record importance and security concerns
 
-**Status:** Educational first vertical-slice MVP, with further modules planned
+- View registered assets
 
-### Completed
+### Risk Register
 
-- Selected ISO 27001 Statement of Applicability and control tracking as the initial project direction.
-- Started learning ISO/IEC 27001:2022 and ISMS fundamentals.
-- Defined the initial GRC workflow.
+- Create information-security risks
 
-### In progress
+- Link a risk to an information asset
 
-- Finalizing the fictional organization and ISMS scope.
-- Identifying initial information assets and risks.
-- Designing the requirements and data model.
+- Record threat, vulnerability, and potential impact
 
-### Planned next steps
+- Assess likelihood and impact on a 1–5 scale
 
-1. Finalize the organization profile and ISMS scope.
-2. Define the first five risks.
-3. Define the first set of controls in my own words.
-4. Document the SoA fields and workflow.
-5. Design the database entities and relationships.
-6. Select the technology stack.
-7. Build the first vertical slice of the application.
-8. Test the risk-to-control-to-evidence workflow.
+- Calculate the risk rating
 
-## Disclaimer
+- Select a treatment option
 
-This repository is for learning and portfolio purposes. It does not provide legal, audit, certification, or compliance advice. ISO/IEC 27001 requirements should be interpreted using the official standard and qualified professional guidance where necessary.
+- Record treatment actions and review date
+
+- View risk details and status
+
+### Reviews and Approvals
+
+- View risks submitted for review
+
+- Add a review comment
+
+- Approve a submission
+
+- Reject a submission
+
+- Request changes
+
+- Apply reviewer permissions through the demonstration role model
+
+### Audit History
+
+- Append-only record of important actions
+
+- Records asset and risk creation
+
+- Records review submissions
+
+- Records approval-related actions
+
+- Records role changes and denied actions
+
+- Displays actor, action, entity, timestamp, and change details
+
+### Demonstration Roles
+
+The application includes a role selector for demonstrating basic access behavior:
+
+- **Administrator**
+
+- **GRC Analyst**
+
+- **Control Owner**
+
+- **Reviewer/Approver**
+
+- **Read-only Auditor**
+
+The role selector is a demonstration feature and is not production authentication.
+
+## Demonstrated Workflow
+
+The current prototype demonstrates:
+
+> **Asset → Risk Assessment → Treatment → Review → Approval Decision → Audit History**
+
+The application focuses on the implemented risk-management and review workflow. It does not claim to be a complete ISO 27001 compliance-management system.
+
+## Technology
+
+The application is a lightweight web prototype with server-rendered pages, form-based interactions, session-based demonstration roles, and fictional sample records. It is deployed on Vercel.
+
+## Data and Privacy Boundary
+
+The platform is intended for fictional GRC records only. Do not enter:
+
+- Real student or customer information
+
+- Real employee information
+
+- Payment or financial records
+
+- Passwords, API keys, or credentials
+
+- Confidential evidence or business documents
+
+- Personal information belonging to real individuals
+
+## Project Scope
+
+The project scope and fictional Ikigai organization are documented in [`docs/project-scope.md`](docs/project-scope.md).
+
+## Portfolio Disclaimer
+
+This project demonstrates GRC thinking and workflow design for learning and portfolio purposes. It is not legal, audit, certification, privacy, or compliance advice. ISO/IEC 27001 requirements should be interpreted using the official standard and qualified professional guidance.
