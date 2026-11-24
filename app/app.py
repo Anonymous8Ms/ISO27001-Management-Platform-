@@ -6,8 +6,14 @@ import sqlite3
 from flask import Flask, abort, g, redirect, render_template, request, url_for, session
 import secrets
 
-app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+UI_ROOT = os.path.join(PROJECT_ROOT, "UI-UX")
+app = Flask(
+    __name__,
+    template_folder=os.path.join(UI_ROOT, "templates"),
+    static_folder=os.path.join(UI_ROOT, "static"),
+)
 IS_VERCEL = bool(os.environ.get("VERCEL"))
 
 
@@ -19,7 +25,7 @@ def session_key():
         # Vercel's deployment filesystem is read-only. Set GRC_SESSION_KEY in
         # project settings so demo sessions remain valid between instances.
         return secrets.token_hex(32)
-    key_path = os.path.join(BASE_DIR, ".grc-session-key")
+    key_path = os.path.join(PROJECT_ROOT, ".grc-session-key")
     if not os.path.exists(key_path):
         with open(key_path, "w", encoding="utf-8") as key_file:
             key_file.write(secrets.token_hex(32))
@@ -34,7 +40,7 @@ app.config.update(
     SESSION_COOKIE_SAMESITE="Strict",
     SESSION_COOKIE_SECURE=IS_VERCEL,
 )
-default_db_path = "/tmp/ikigai-grc.sqlite3" if IS_VERCEL else os.path.join(BASE_DIR, "grc.sqlite3")
+default_db_path = "/tmp/ikigai-grc.sqlite3" if IS_VERCEL else os.path.join(PROJECT_ROOT, "grc.sqlite3")
 DB_PATH = os.environ.get("GRC_DB", default_db_path)
 ROLES = ["Administrator", "GRC Analyst", "Control Owner", "Reviewer/Approver", "Read-only Auditor"]
 CONTROLS = [

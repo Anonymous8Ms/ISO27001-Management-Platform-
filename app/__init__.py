@@ -1,0 +1,1 @@
+"""Ikigai GRC application package."""

@@ -1,7 +1,7 @@
 import os
 import tempfile
 import unittest
-import app as grc
+from app import app as grc
 
 class SessionPermissions(unittest.TestCase):
     def setUp(self):

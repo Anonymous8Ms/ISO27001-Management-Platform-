@@ -6,17 +6,25 @@
 
 The Flask and SQLite MVP implements a fictional asset and risk register, 1–5 likelihood and impact assessment, risk treatment, seven selected Ikigai controls, risk-to-control links, limited Statement of Applicability decisions, evidence metadata references, submission, independent review decisions, and audit history. It does not accept evidence files or real personal, financial, credential, or production information.
 
-Run `python3 -m pip install -r requirements.txt` and `python3 app.py`, then open `http://127.0.0.1:8000`. Select a fictional demo identity in the header. This selector is a demonstration context and is not production authentication. Run the workflow check with `python3 -m unittest discover -s tests -v`.
+Run `python3 -m pip install -r requirements.txt` and `python3 app/app.py`, then open `http://127.0.0.1:8000`. Select a fictional demo identity in the header. This selector is a demonstration context and is not production authentication. Run the workflow check with `python3 -m unittest discover -s app/tests -v`.
 
 The five sidebar destinations are Dashboard, Asset Register, Risk Register, Reviews and Approvals, and Audit History. Other modules described below remain future plans.
 
 ## Deploy to Vercel
 
-Vercel automatically detects the root `app.py` as a Flask application. Import this GitHub repository in Vercel, leave the framework preset and build/output settings on their detected defaults, and add a secret environment variable named `GRC_SESSION_KEY` for Production, Preview, and Development. Generate its value locally with `python3 -c "import secrets; print(secrets.token_hex(32))"`; do not commit the value.
+Vercel automatically detects `app/app.py` as a Flask application. Import this GitHub repository in Vercel, leave the framework preset and build/output settings on their detected defaults, and add a secret environment variable named `GRC_SESSION_KEY` for Production, Preview, and Development. Generate its value locally with `python3 -c "import secrets; print(secrets.token_hex(32))"`; do not commit the value.
 
 This repository uses SQLite. On Vercel it is placed in `/tmp`, because a Function's deployed filesystem is read-only. The resulting database is suitable only for a portfolio demonstration: records can reset on a cold start, redeployment, or a request served by a different Function instance. A durable multi-user deployment must migrate the database to a persistent service such as a Vercel Marketplace Postgres provider before it is treated as production.
 
 After the first deployment, open the Vercel URL and exercise the demo workflow. Future pushes to `main` create new production deployments when Git integration is enabled; pushes to other branches create previews.
+
+## Repository structure
+
+- `GRC-Documentation/` — project documentation and GRC source-of-truth records
+- `UI-UX/` — Jinja page templates and the shared stylesheet
+- `app/` — Flask application code and automated workflow tests
+
+The root contains only the README and the small configuration files required by Python, Git, and Vercel.
 
 A learning project for understanding and applying Governance, Risk, and Compliance (GRC) concepts through a small ISO/IEC 27001:2022-inspired web application.
 
@@ -85,11 +93,11 @@ These roles are design assumptions for the learning project and may be revised a
 
 ## Documentation
 
-- [Project scope](docs/project-scope.md)
-- [Functional requirements](docs/Functional-requirements.md)
-- [User roles and permissions](docs/Roles-and-Permission%20.md)
-- [Workflows and statuses](docs/Workflows-and-status.md)
-- Tests: `tests/test_sessions.py`
+- [Project scope](GRC-Documentation/project-scope.md)
+- [Functional requirements](GRC-Documentation/Functional-requirements.md)
+- [User roles and permissions](GRC-Documentation/Roles-and-Permission%20.md)
+- [Workflows and statuses](GRC-Documentation/Workflows-and-status.md)
+- Tests: `app/tests/test_sessions.py`
 
 ## Current status
 

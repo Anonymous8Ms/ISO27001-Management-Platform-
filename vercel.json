@@ -1,8 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "app.py": {
-      "excludeFiles": "{tests/**,docs/**,**/test_*.py,ISO 27001 GRC Management Platform.pdf}"
+    "app/app.py": {
+      "includeFiles": "UI-UX/**",
+      "excludeFiles": "{app/tests/**,GRC-Documentation/**,**/test_*.py}"
     }
   }
 }
